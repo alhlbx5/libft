@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 10:01:40 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/17 13:16:59 by aalhalab         ###   ########.fr       */
+/*   Created: 2023/10/09 12:37:49 by aalhalab          #+#    #+#             */
+/*   Updated: 2023/10/16 18:07:32 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-char *save_string(char c)
+int	isprint(int c);
 {
-	char *ptr = &ptr;
-	int i = 0;
-	ptr[i] = c;
-	i++;
-	
+	if (c >= 32 && c <= 126)
+		return (1);
+	else
+		return (0);
 }
-
-char	*ft_atoi(char *c)
-{
-	
-}
-
 
