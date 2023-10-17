@@ -5,24 +5,76 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 10:01:40 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/17 13:16:59 by aalhalab         ###   ########.fr       */
+/*   Created: 2023/10/18 00:39:04 by aalhalab          #+#    #+#             */
+/*   Updated: 2023/10/18 01:55:10 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-char *save_string(char c)
+
+#include "libft.h"
+
+
+
+int ft_atoi(const char *str)
 {
-	char *ptr = &ptr;
-	int i = 0;
-	ptr[i] = c;
-	i++;
+	int i;
+	int result;
+	char sign;
 	
+	result = 0;
+	i = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if(str[i] == '+' || str[i] == '-')
+		sign = str[i++];
+	while( str[i] >= '0' && str[i] <= '9')
+		result = (result * 10) + (str[i++] - 48);
+	if (sign == '-')
+		return (-result);
+	return (result);
 }
-
-char	*ft_atoi(char *c)
-{
+// int ft_atoi(const char *str)
+// {
+// 	int i;
+// 	int result;
+// 	char sign;
 	
-}
+// 	sign = '+';
+// 	result = 0;
+// 	i = 0;
+// 	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' ||
+// 			str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+// 		i++;
+// 	if(str[i] == '+' || str[i] == '-')
+// 		sign = str[i++];
+// 	while( str[i] >= '0' && str[i] <= '9')
+// 	{
+// 		result *= 10;
+// 		result += str[i] - 48;
+// 		i++;
+// 	}
+// 	if (sign == '-')
+// 		return (-result);
+// 	else
+// 		return (result);
+// }
 
 
+// #include <stdio.h>
+// #include <stdlib.h> 
+
+// // int main ()
+// {
+// 	int result1;
+// 	int result2;
+// 	char *khara;
+	
+// 	khara = "2147483647";
+// 	result1 = ft_atoi(khara);
+// 	result2= atoi(khara);
+// 	printf("ft_atoi = %d \n", result1);
+// 	printf("atoi = %d \n", result2);
+	
+// 	return (0);
+// }
