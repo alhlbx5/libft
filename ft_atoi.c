@@ -6,7 +6,7 @@
 /*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 00:39:04 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/18 01:55:10 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/10/18 18:01:47 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,42 @@
 
 #include "libft.h"
 
-
-
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int i;
-	int result;
-	char sign;
-	
-	result = 0;
-	i = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if(str[i] == '+' || str[i] == '-')
-		sign = str[i++];
-	while( str[i] >= '0' && str[i] <= '9')
-		result = (result * 10) + (str[i++] - 48);
-	if (sign == '-')
-		return (-result);
-	return (result);
+	int	g[2];
+
+	g[0] = 0;
+	g[1] = 0;
+	while ((*str == ' ' || (*str >= 9 && *str <= 13)))
+		str++;
+	(*str == '+' || *str == '-') && (g[1] = *(str++)); 
+	while (*str >= '0' && *str <= '9')
+		g[0] = (g[0] * 10) + (*(str++) - 48);
+	return (g[0] * (((2 * (g[1] == '-')) - 1) * -1));
 }
+
+
+// int ft_atoi(const char *str)
+// {
+// 	int i;
+// 	int result;
+// 	char sign;
+	
+// 	result = 0;
+// 	i = 0;
+// 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+// 		i++;
+// 	if(str[i] == '+' || str[i] == '-')
+// 		sign = str[i++];
+// 	while( str[i] >= '0' && str[i] <= '9')
+// 		result = (result * 10) + (str[i++] - 48);
+// 	if (sign == '-')
+// 		return (-result);
+// 	return (result);
+// }
+
+
+
 // int ft_atoi(const char *str)
 // {
 // 	int i;
