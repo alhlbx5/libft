@@ -6,11 +6,12 @@
 /*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:15:08 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/14 15:50:35 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/10/19 10:35:37 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
 int	ft_strlen(const char *c)
 {
@@ -37,17 +38,17 @@ size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize
     
 }
 
-int main() 
-{
-    char a[5]; // Destination buffer
-    char b[] = "Hello, world!";
-    strlcpy(a, b , 1);
-    printf("origin  %s\n", a);
-    char c[5]; // Destination buffer
-    char d[] = "Hello, world!";
-    ft_strlcpy(c, d, 1);
+// int main() 
+// {
+//     char a[5]; // Destination buffer
+//     char b[] = "Hello, world!";
+//     strlcpy(a, b , 1);
+//     printf("origin  %s\n", a);
+//     char c[5]; // Destination buffer
+//     char d[] = "Hello, world!";
+//     ft_strlcpy(c, d, 1);
 
-    printf("copy  %s\n", c);
+//     printf("copy  %s\n", c);
 
-    return 0;
-}
+//     return 0;
+// }
