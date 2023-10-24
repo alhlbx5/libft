@@ -6,7 +6,7 @@
 /*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 14:19:15 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/21 20:21:48 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/10/23 17:51:50 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,6 @@
 #include <stdio.h>
 #include <string.h>
 
-int	ft_strlen(char *c)
-{
-	int	i;
-
-	i = 0;
-	while (c[i])
-	{
-		i++;
-	}
-	return (i);
-}
 size_t	ft_strlcat	(char * dst,const char * src, size_t n)
 {
 	size_t i;

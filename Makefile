@@ -1,6 +1,6 @@
 NAME = libft.a
 
-SRCS =  ft_strlcat.c
+SRCS =  ft_strlcat.c ft_strnstr.c ft_strrchr.c ft_strlen.c ft_strchr.c ft_strlcpy.c
 
 OBJS = $(SRCS:.c=.o)
 
