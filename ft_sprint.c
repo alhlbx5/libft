@@ -6,9 +6,11 @@
 /*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:37:49 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/09 13:33:42 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/10/25 14:59:31 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_sprint(char c)
 {

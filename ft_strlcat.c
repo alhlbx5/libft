@@ -6,20 +6,18 @@
 /*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 14:19:15 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/23 17:51:50 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/10/25 16:03:50 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-size_t	ft_strlcat	(char * dst,const char * src, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t n)
 {
-	size_t i;
-	size_t c;
-	size_t dstln;
-	size_t srcln;
+	size_t	i;
+	size_t	c;
+	size_t	dstln;
+	size_t	srcln;
 
 	i = 0;
 	c = 0;
@@ -29,7 +27,7 @@ size_t	ft_strlcat	(char * dst,const char * src, size_t n)
 	{
 		i++;
 	}
-	while(c < srcln && i + 1 < n)
+	while (c < srcln && i + 1 < n)
 	{
 		dst[i] = src[c];
 		c++;
@@ -46,7 +44,6 @@ size_t	ft_strlcat	(char * dst,const char * src, size_t n)
 // {
 // 	// char d1[20] = "12345";
 // 	// char *s1 = "6789";
-	
 // 	char d3[20] = "pqrstuvwxyz";
 
 // 	char d2[20] = "pqrstuvwxyz";

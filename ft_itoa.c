@@ -6,11 +6,12 @@
 /*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 19:03:19 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/18 19:06:36 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/10/25 14:59:11 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_itoa(int n)
+#include "libft.h"
+
+char	*ft_itoa(int n)
 {
-	
 }

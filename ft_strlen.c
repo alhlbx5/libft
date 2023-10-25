@@ -6,11 +6,13 @@
 /*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 13:27:11 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/14 15:36:11 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/10/25 15:18:30 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *c)
+#include "libft.h"
+
+int	ft_strlen(const char *c)
 {
 	int	i;
 

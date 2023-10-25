@@ -6,15 +6,18 @@
 /*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 15:35:56 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/10 17:04:03 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/10/25 14:58:43 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_bzero(char *c, int n)
 {
-	int i;
+	int	i;
+
 	i = 0;
-	while(i < n)
+	while (i < n)
 	{
 		c[i] = '\0';
 		i++;

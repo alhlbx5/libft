@@ -6,15 +6,16 @@
 /*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:37:49 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/18 00:09:11 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/10/25 16:07:08 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isprint(int c)
+#include "libft.h"
+
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);
 }
-

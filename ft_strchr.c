@@ -6,7 +6,7 @@
 /*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 19:20:12 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/23 19:28:18 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/10/25 14:37:03 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 char	*ft_strchr(const char *a, int c)
 {
-	int i;
+	int	i;
+
 	i = 0;
 	while (a[i])
 	{
-		if (a[i] ==((char) c))
-			return (a + i);
+		if (a[i] == ((char) c))
+			return ((char *)a + i);
 		i++;
 	}
 	return (NULL);
