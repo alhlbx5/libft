@@ -6,7 +6,7 @@
 /*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 11:52:20 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/25 16:42:18 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/10/26 17:36:17 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdio.h>
 # include <string.h>
+# include <stdlib.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(char *c, int n);
@@ -37,5 +38,7 @@ char	*ft_strnstr(const char *a, const char *b, size_t n);
 char	*ft_strrchr(const char *a, int c);
 int		ft_tolower(int c);
 int		ft_toupper(char c);
-int		strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *s1);
 #endif

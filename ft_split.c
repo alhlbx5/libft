@@ -1,38 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/11 14:46:57 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/26 17:48:17 by aalhalab         ###   ########.fr       */
+/*   Created: 2023/10/25 18:44:07 by aalhalab          #+#    #+#             */
+/*   Updated: 2023/10/25 19:03:34 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+char *
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
-{
-	char *s;
-	char *d;
-	char *buffer;
-	size_t i;
-	
-	s = (char *)src;
-	d = (char *)dst;
-	buffer = ft_strdup(s);
-	i = 0;
-	while(s && i < len)
-	{
-		buffer[i] = s[i];
-		i++;
-	}
-	i = 0;
-	while(buffer && i < len)
-	{
-		d[i] = buffer[i];
-		i++;
-	}
-	return (d);
-}
+int main
+(
+	char *a = "012,345,678";
+	ft_split(a, ',');
+)
