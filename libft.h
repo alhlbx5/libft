@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
+/*   By: aalhalab <aalhalab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 11:52:20 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/26 17:36:17 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/10/30 17:08:09 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
+#include <unistd.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(char *c, int n);
@@ -41,4 +42,5 @@ int		ft_toupper(char c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
+char	*ft_itoa(int n);
 #endif
