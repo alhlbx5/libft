@@ -6,7 +6,7 @@
 /*   By: aalhalab <aalhalab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 11:52:20 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/30 17:08:09 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/10/31 21:23:11 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,8 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 char	*ft_itoa(int n);
+void    ft_putchar_fd(char c, int fd);
+void    ft_putstr_fd(char *s, int fd);
+void    ft_putendl_fd(char *s, int fd);
+void    ft_putnbr_fd(int n, int fd);
 #endif
