@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
+/*   By: aalhalab <aalhalab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 14:19:34 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/25 16:04:36 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:56:55 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	i = 0;
-	while (src[i] && i < dstsize - 1)
+	while (src[i] && i < dstsize - 1 && dstsize)
 	{
-		if (dstsize == 0)
-			break ;
 		dst[i] = src[i];
 		i++;
 	}
+	if (dstsize)
+		dst[i] = '\0';
 	return (ft_strlen((char *)src));
 }
 
@@ -38,5 +38,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 // 	char b[20];
 
 // 	printf("result is<
-// 	printf("result is 
+// 	printf("result is
 // }

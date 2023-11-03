@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
+/*   By: aalhalab <aalhalab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 14:46:57 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/26 17:48:17 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:55:21 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,22 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char *s;
-	char *d;
-	char *buffer;
-	size_t i;
-	
-	s = (char *)src;
-	d = (char *)dst;
-	buffer = ft_strdup(s);
-	i = 0;
-	while(s && i < len)
+	unsigned char		*d;
+	const unsigned char	*s;
+
+	s = (const unsigned char *)src;
+	d = (unsigned char *)dst;
+	if (d == s || len == 0)
+		return (dst);
+	if (d < s || d >= s + len)
+		while (len--)
+			*d++ = *s++;
+	else
 	{
-		buffer[i] = s[i];
-		i++;
+		d += len - 1;
+		s += len - 1;
+		while (len--)
+			*d-- = *s--;
 	}
-	i = 0;
-	while(buffer && i < len)
-	{
-		d[i] = buffer[i];
-		i++;
-	}
-	return (d);
+	return (dst);
 }

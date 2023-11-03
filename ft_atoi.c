@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
+/*   By: aalhalab <aalhalab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 00:39:04 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/20 15:52:19 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:40:44 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	ft_atoi(const char *str)
 // 		return (result);
 // }
 // #include <stdio.h>
-// #include <stdlib.h> 
+// #include <stdlib.h>
 // // int main ()
 // {
 // 	int result1;

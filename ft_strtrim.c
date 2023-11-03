@@ -6,45 +6,32 @@
 /*   By: aalhalab <aalhalab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 18:31:01 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/11/01 18:52:12 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:47:50 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int is_in_set(char c, char const *set) 
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    while (*set) 
-    {
-        if (*set == c)
-            return 1;
-        set++;
-    }
-    return 0;
-}
+	char	*new_str;
+	size_t	f;
+	size_t	i;
+	size_t	j;
 
-char *ft_strtrim(char const *s1, char const *set)
-{
-    if (!s1) return NULL;
-    size_t len = 0;
-    while (s1[len])
-        len++;
-    size_t start = 0;
-    while (s1[start] && is_in_set(s1[start], set))
-        start++;
-    size_t end = len - 1;
-    while (end > start && is_in_set(s1[end], set))
-        end--;
-    size_t new_len = end - start + 1;
-    char *trimmed_str = (char *)malloc(new_len + 1);
-    if (!trimmed_str) 
-        return NULL;
-    size_t i = 0;
-    while (i < new_len)
-    {
-        trimmed_str[i] = s1[start + i];
-        i++;
-    }
-    trimmed_str[new_len] = '\0';
-    return trimmed_str;
+	i = 0;
+	j = 0;
+	if (set[i] == '\0' || s1[i] == '\0')
+		return (ft_strdup(s1));
+	f = ft_strlen(s1);
+	while (ft_strchr(set, s1[i]))
+		i++;
+	while (ft_strrchr(set, s1[f - j - 1]))
+		j++;
+	new_str = ft_substr(s1, i, f - i - j);
+	return (new_str);
 }
+// int main()
+// {
+//     printf("%s\n", ft_strtrim("", ""));
+// }

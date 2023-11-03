@@ -6,7 +6,7 @@
 /*   By: aalhalab <aalhalab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 15:18:50 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/11/01 15:23:04 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:41:12 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,27 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
+	char	*substring;
 
-	if (!s) 
-		return NULL;
-    i = 0;
-    while (s[start + i] && i < len)
-		i++;
-    char *substring = malloc(i + 1);
-    if (!substring)
-		return NULL;
-    i = 0;
-    while (s[start + i] && i < len)
+	i = ft_strlen(s);
+	if (!i || i < start)
+		return (ft_calloc(1, 1));
+	i = ft_strlen(&s[start]);
+	if (len < i)
+		substring = ft_calloc(len + 1, sizeof(char));
+	else
+		substring = ft_calloc(i + 1, sizeof(char));
+	if (!substring)
+		return (NULL);
+	i = 0;
+	while (s[start + i] && i < len)
 	{
 		substring[i] = s[start + i];
 		i++;
-    }
-	substring[i] = '\0';
-    while (s[i]) 
-		i++;
-    if (start >= i) 
-		substring[0] = '\0';
-	return substring;
+	}
+	return (substring);
 }
+// ft_strlcpy(substring, &s[start], len + 1);
 // int main()
 // {
 // 	printf("%s\n",ft_substr("01234", 10, 10));

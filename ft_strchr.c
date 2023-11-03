@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalhalab <aalhlalab@student.42heilbronn    +#+  +:+       +#+        */
+/*   By: aalhalab <aalhalab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 19:20:12 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/25 14:37:03 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:48:29 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 char	*ft_strchr(const char *a, int c)
 {
-	int	i;
-
-	i = 0;
-	while (a[i])
+	while (*a)
 	{
-		if (a[i] == ((char) c))
-			return ((char *)a + i);
-		i++;
+		if (*a == ((char)c))
+			return ((char *)a);
+		a++;
 	}
+	if (*a == ((char)c))
+		return ((char *)a);
 	return (NULL);
 }
 

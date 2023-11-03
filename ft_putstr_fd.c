@@ -6,14 +6,14 @@
 /*   By: aalhalab <aalhalab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 21:26:13 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/31 21:35:19 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:55:43 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    while (*s)
-		  write (fd, s++, 1);
+	while (*s)
+		write(fd, s++, 1);
 }

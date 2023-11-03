@@ -6,15 +6,15 @@
 /*   By: aalhalab <aalhalab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 21:26:43 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/10/31 21:34:57 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:56:21 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-    int	i;
+	int	i;
 
 	i = 0;
 	if (n < 0)

@@ -6,37 +6,37 @@
 /*   By: aalhalab <aalhalab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:28:44 by aalhalab          #+#    #+#             */
-/*   Updated: 2023/11/01 18:10:19 by aalhalab         ###   ########.fr       */
+/*   Updated: 2023/11/03 22:59:34 by aalhalab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
-{
-    size_t  i1;
-    size_t  i2;
-    size_t  i;
+char	*ft_strjoin(char const *s1, char const *s2)
 
-    i1 = ft_strlen(s1);
-    i2 = ft_strlen(s2);
-    if (!s1 || !s2)
-        return NULL;
-    char *str2 = (char *)malloc(i1 + i2 + 1);
-    if (!str2)
-        return NULL;
-    i = 0;
-    while (s1[i])
-    {
-        str2[i] = s1[i];
-        i++;
-    }
-    i = 0;
-    while (s2[i])
-    {
-        str2[i1 + i] = s2[i];
-        i++;
-    }
-    str2[i1 + i2] = '\0';
-    return str2;
+{
+	char	*result;
+	size_t	len1;
+	size_t	len2;
+	size_t	i;
+
+	i = 0;
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	result = malloc((len1 + len2 + 1) * sizeof(char));
+	if (!result || !s1 || !s2)
+		return (NULL);
+	while (i < len1)
+	{
+		result[i] = s1[i];
+		i++;
+	}
+	while (i < len2 + len1)
+	{
+		result[i] = *s2;
+		i++;
+		s2++;
+	}
+	result[i] = '\0';
+	return (result);
 }
